@@ -46,9 +46,30 @@ void CMyListEx::DeleteFront() {
 }
 
 void CMyListEx::DeleteBack() {
-
+	if (this->headNode == nullptr) {
+		this->Print();
+	}
+	else {
+		this->DeleteBackDNode();
+		this->Print();
+	}
 }
 
 void CMyListEx::PrintReverse() {
+	cout << endl;
+	int& m_nLength = this->GetLength();
+	if (m_nLength == 0) {
+		cout << "출력할 데이터가 없습니다." << endl << endl;
+		return;
+	}
 
+	DNode* curNode = this->tailNode;
+
+	cout << "CMyList 데이터 : [Head] ";
+	for (int i = m_nLength; i > 1; i--) {
+		cout << curNode->data << " - ";
+		curNode = curNode->prev;
+	}
+	cout << curNode->data << " [Tail]" << endl;
+	cout << "데이터의 개수 : " << m_nLength << "개" << endl << endl;
 }

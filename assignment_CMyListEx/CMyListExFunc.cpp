@@ -29,3 +29,13 @@ void CMyListEx::DeleteFrontDNode() {
 	delete delNode;
 	this->GetLength()--;
 }
+
+void CMyListEx::DeleteBackDNode() {
+	DNode* delNode = this->tailNode;
+	if (this->tailNode->prev != nullptr) {
+		this->tailNode->prev->next = nullptr;
+	}
+	this->tailNode = this->tailNode->prev;
+	delete delNode;
+	this->GetLength()--;
+}

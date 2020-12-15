@@ -19,4 +19,5 @@ public:
 
 	void InsertFrontDNode(int);
 	void DeleteFrontDNode();
+	void DeleteBackDNode();
 };
