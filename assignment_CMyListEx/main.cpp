@@ -7,11 +7,14 @@ using namespace std;
 
 int	main()
 {
-	CMyListEx* myListex = new CMyListEx;
-	int	num;
-	while (1)
+	int num;
+	int arr[3] = {1, 2, 3};
+	CMyListEx* myListex = new CMyListEx(arr, 3);
+	*myListex += 1;
+	myListex->Print();
+	/*while (1)
 	{
-		myListex->ShowMenu();
+		CMyListEx::ShowMenu();
 		cin >> num;
 		if (cin.fail())
 		{
@@ -41,7 +44,7 @@ int	main()
 			cout << " 0, 1,	2, 3, 4, 5,	6 중	 숫자를 입력하세요~!	: ";
 			continue;
 		}
-	}
+	}*/
 
 	return	0;
 }

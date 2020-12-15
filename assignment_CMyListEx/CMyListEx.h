@@ -2,15 +2,12 @@
 
 #include "../assignment_CMyList/CMyList.h"
 
-class test {
-public:
-	int tis;;
-};
-
 class CMyListEx : public CMyList {
 public:
+	CMyListEx();
+	CMyListEx(int arr[], int size);
 	virtual ~CMyListEx();
-	void ShowMenu() const;
+	static void ShowMenu();
 	void InsertFront();
 	void InsertBack();
 	void DeleteFront();
@@ -20,4 +17,6 @@ public:
 	void InsertFrontDNode(int);
 	void DeleteFrontDNode();
 	void DeleteBackDNode();
+
+	CMyListEx& operator+=(const int&);
 };

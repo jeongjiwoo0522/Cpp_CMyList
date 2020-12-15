@@ -14,7 +14,7 @@ CMyList::~CMyList() {
 	this->FreeDNodeList();
 }
 
-void CMyList::ShowMenu() const{
+void CMyList::ShowMenu(){
 	puts("---------------------");
 	puts("CMyList ¸Þ´º");
 	puts("1 »ðÀÔ");

@@ -11,7 +11,7 @@ public:
 	CMyList();
 	virtual ~CMyList();
 
-	void ShowMenu() const;
+	static void ShowMenu();
 	void Insert();
 	void Print() const;
 	

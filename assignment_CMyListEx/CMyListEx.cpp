@@ -5,11 +5,21 @@
 
 using namespace std;
 
+CMyListEx::CMyListEx() {
+
+}
+
+CMyListEx::CMyListEx(int arr[], int size) {
+	for (int i = 0; i < size; i++) {
+		this->InsertDNode(arr[i]);
+	}
+}
+
 CMyListEx::~CMyListEx() {
 	cout << "~CMyListEx()" << endl;
 }
 
-void CMyListEx::ShowMenu() const {
+void CMyListEx::ShowMenu() {
 	puts("---------------------");
 	puts("CMyListEx 메뉴");
 	puts("1 삽입 Head");
@@ -72,4 +82,9 @@ void CMyListEx::PrintReverse() {
 	}
 	cout << curNode->data << " [Tail]" << endl;
 	cout << "데이터의 개수 : " << m_nLength << "개" << endl << endl;
+}
+
+CMyListEx& CMyListEx::operator+=(const int& data) {
+	this->InsertDNode(data);
+	return *this;
 }

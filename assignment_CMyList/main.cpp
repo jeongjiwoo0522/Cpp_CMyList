@@ -10,7 +10,7 @@ int	main()
 	int	num;
 	while (1)
 	{
-		myList->ShowMenu();
+		CMyList::ShowMenu();
 		cin >> num;
 		if (cin.fail())
 		{
