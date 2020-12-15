@@ -20,6 +20,8 @@ public:
 
 	int& GetLength();
 
+	virtual CMyList& operator+=(const int&);
+
 protected:
 	DNode* headNode;
 	DNode* tailNode;

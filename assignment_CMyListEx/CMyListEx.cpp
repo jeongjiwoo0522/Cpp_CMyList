@@ -85,6 +85,6 @@ void CMyListEx::PrintReverse() {
 }
 
 CMyListEx& CMyListEx::operator+=(const int& data) {
-	this->InsertDNode(data);
+	this->InsertFrontDNode(data);
 	return *this;
 }

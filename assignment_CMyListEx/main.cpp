@@ -10,9 +10,8 @@ int	main()
 	int num;
 	int arr[3] = {1, 2, 3};
 	CMyListEx* myListex = new CMyListEx(arr, 3);
-	*myListex += 1;
 	myListex->Print();
-	/*while (1)
+	while (1)
 	{
 		CMyListEx::ShowMenu();
 		cin >> num;
@@ -44,7 +43,7 @@ int	main()
 			cout << " 0, 1,	2, 3, 4, 5,	6 중	 숫자를 입력하세요~!	: ";
 			continue;
 		}
-	}*/
+	}
 
 	return	0;
 }

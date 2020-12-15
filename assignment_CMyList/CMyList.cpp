@@ -79,3 +79,8 @@ void CMyList::FreeDNodeList() {
 int& CMyList::GetLength() {
 	return this->m_nLength;
 }
+
+CMyList& CMyList::operator+=(const int& data) {
+	this->InsertDNode(data);
+	return *this;
+}
