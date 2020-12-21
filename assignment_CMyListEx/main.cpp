@@ -11,6 +11,9 @@ int	main()
 	int arr[3] = {1, 2, 3};
 	CMyListEx* myListex = new CMyListEx(arr, 3);
 	myListex->Print();
+
+	*myListex += 12; // 12가 삽입이 된다 
+
 	while (1)
 	{
 		CMyListEx::ShowMenu();
